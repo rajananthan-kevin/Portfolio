@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="public/css/skills.css">
     <link rel="stylesheet" href="public/css/projects.css">
     <link rel="stylesheet" href="public/css/footer.css">
+    <link rel="stylesheet" href="public/css/loader.css">
     <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -35,8 +36,10 @@
    
 </head>
 
-
 <body style="width: 100%;">
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>
+    </div>
     <!-- first view -->
     <section>
         <div class="circle"></div>
@@ -65,7 +68,7 @@
              <li><img src="stylisme.png" width="230px"></li>
          </ul> -->
         <ul class="sci">
-            <li><a href="#"><i class="fab fa-linkedin-in" style="font-size: 50px ; color: black"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/kevin-rajananthan/" target="_blank"><i class="fab fa-linkedin-in" style="font-size: 50px ; color: black"></i></a></li>
             <li><a href="#"><i class="fab fa-facebook-f" style="font-size: 50px ; color: black"></i></a></li>
             <li><a href="#"><i class="fab fa-google-plus-g" style="font-size: 50px ; color: black"></i></a></li>
         </ul>
@@ -343,6 +346,8 @@
     <div class="copyright">
         <p>Copyright 2021 Kevin RAJANANTHAN. All Rights Reserved</p>
     </div>
+
+    
     <!-- end-Copyright -->
 
 
@@ -353,6 +358,14 @@
     <script type="text/javascript" src="./JS/scroll.js"></script>
      
     <script type="text/javascript">
+
+        let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+        window.addEventListener('load', function () {
+            // spinnerWrapper.style.display = 'none';
+            spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+        });
+
         var typed = new Typed('#typed', {
             strings: ["Développeur Front-end"],
             typeSpeed : 100,
